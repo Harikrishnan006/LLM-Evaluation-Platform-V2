@@ -97,4 +97,4 @@ Get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com)
 AI Automation Associate · Vendasta  
 Former ML Data Associate · Amazon (Rufus, Alexa+)
 
-[LinkedIn](https://www.linkedin.com/in/harikrishnan-venkatesan) · [GitHub](https://github.com/Harikrishnan006) · [Hugging Face](https://huggingface.co/Harikrishnan006)
+[LinkedIn](https://www.linkedin.com/in/harikrishnan-venkatesan-8946a3215) · [GitHub](https://github.com/Harikrishnan006) · [Hugging Face](https://huggingface.co/Harikrishnan006)
