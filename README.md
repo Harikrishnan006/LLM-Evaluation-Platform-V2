@@ -1,159 +1,84 @@
-# LLM Evaluation Platform V2
+LLM Evaluation Platform
 
-A Streamlit-based application designed to evaluate Large Language Model (LLM) responses using Google's Gemini API. The platform helps assess response quality, identify hallucinations, perform root cause analysis, and generate actionable recommendations through an interactive dashboard.
 
----
+Evaluate LLM response quality using AI — score truthfulness, detect hallucinations, and generate improvement recommendations.
 
-## Project Overview
 
-As organizations increasingly adopt Generative AI solutions, ensuring response quality and factual accuracy has become critical. This project provides a framework for evaluating AI-generated responses against reference answers and identifying potential quality issues.
 
-The platform leverages Gemini as an evaluation engine to score responses across multiple dimensions and present insights through an easy-to-use dashboard.
+🔗 Live Demo: Click to try the app
 
----
+📁 Type: Portfolio Project — AI Engineering
 
-## Key Features
+🛠 Stack: Python · Streamlit · Google Gemini · TruthfulQA · Pandas · Hugging Face
 
-* Automated evaluation of AI-generated responses
-* Relevance, completeness, and truthfulness scoring
-* Hallucination detection
-* Safety assessment
-* Root Cause Analysis (RCA)
-* Recommendation generation
-* Interactive dashboard for analysis
-* CSV export functionality
-* Category-wise performance analysis
 
----
+Show Image
 
-## Technology Stack
 
-* Python
-* Streamlit
-* Pandas
-* Google Gemini API
-* TruthfulQA Dataset
-* Python Dotenv
+The Problem
 
----
+As LLMs are adopted in production, response quality becomes critical. How do you know if your model is hallucinating? How do you measure truthfulness at scale? Manual review doesn't work beyond a handful of responses.
 
-## Workflow
+The Solution
 
-```text
-Dataset Input
-     ↓
-Response Evaluation
-     ↓
-Gemini-Based Assessment
-     ↓
-Quality Scoring
-     ↓
-Root Cause Analysis
-     ↓
-Recommendations
-     ↓
-Dashboard Visualization
-```
+An automated evaluation platform that uses Gemini as an AI judge — scoring LLM responses across multiple quality dimensions and surfacing root causes and recommendations.
 
----
 
-## Dashboard Capabilities
+How It Works
 
-The platform provides visibility into:
+Load TruthfulQA Dataset
+        ↓
+Select sample size → Click Run Evaluation
+        ↓
+Each response sent to Gemini with evaluation prompt
+        ↓
+Gemini scores: Relevance · Completeness · Truthfulness · Hallucination · Safety
+        ↓
+Quality Score computed · Root Cause identified · Recommendation generated
+        ↓
+Results table · Charts · CSV export
 
-* Overall response quality
-* Truthfulness trends
-* Hallucination levels
-* Root cause distribution
-* Recommendation analysis
-* Category-level performance metrics
 
----
+Evaluation Metrics
 
-## Screenshots
+MetricDescriptionRelevanceHow well the response answers the questionCompletenessCoverage of required informationTruthfulnessFactual accuracy of the responseHallucinationPresence of unsupported information (higher = worse)SafetyAppropriateness of the responseQuality ScoreWeighted composite of all metrics
 
-### Dashboard Overview
 
-![Dashboard](dashboard.png)
+Features
 
-### Root Cause Analysis
 
-![Root Cause Analysis](rca_analysis.png)
+Configure sample size and run evaluations on demand
+Per-response scoring across 5 dimensions
+Root Cause Analysis with distribution charts
+Recommendation generation for each response
+Category-level performance breakdown
+CSV export of all results
+Uses TruthfulQA — a standard LLM benchmarking dataset
 
-### Recommendation Analysis
 
-![Recommendation Analysis](recommendation_analysis.png)
 
----
+Tech Stack
 
-## Evaluation Metrics
+LanguagePython 3.10+UIStreamlitEvaluator LLMGoogle Gemini 2.5 FlashDatasetTruthfulQA (via Hugging Face Datasets)DeploymentHugging Face Spaces
 
-Each response is evaluated across the following dimensions:
 
-| Metric        | Description                                |
-| ------------- | ------------------------------------------ |
-| Relevance     | How well the response answers the question |
-| Completeness  | Coverage of required information           |
-| Truthfulness  | Factual accuracy of the response           |
-| Hallucination | Presence of unsupported information        |
-| Safety        | Safety and appropriateness of the response |
-| Quality Score | Overall evaluation score                   |
+Run Locally
 
----
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Harikrishnan006/LLM-Evaluation-Platform-V2.git
-```
-
-Install dependencies:
-
-```bash
+bashgit clone https://github.com/Harikrishnan006/LLM-Evaluation-Platform-V2.git
+cd LLM-Evaluation-Platform-V2
 pip install -r requirements.txt
-```
-
-Create a `.env` file:
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-Run the application:
-
-```bash
+# Add GEMINI_API_KEY to .env
 streamlit run app.py
-```
 
----
+Get a free Gemini API key at aistudio.google.com
 
-## Use Cases
 
-* AI Response Quality Monitoring
-* Hallucination Detection
-* LLM Benchmarking
-* AI Governance Initiatives
-* Response Validation Workflows
-* Internal AI Evaluation Frameworks
+Author
 
----
+Harikrishnan Venkatesan
 
-## Future Improvements
+AI Automation Associate · Vendasta
 
-* Multi-model comparison
-* Batch evaluation support
-* API integration
-* RAG evaluation workflows
-* Advanced reporting and analytics
+Former ML Data Associate · Amazon (Rufus, Alexa+)
 
----
-
-## Author
-
-**Harikrishnan V**
-
-AI Automation Associate | Former Amazon ML Data Associate
-
-Focused on AI Operations, LLM Evaluation, Data Quality, and Process Automation.
+LinkedIn · GitHub · Hugging Face
